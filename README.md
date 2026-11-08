@@ -41,7 +41,7 @@ Basic Python, NumPy and pandas. The companion course [Python and Data Analysis](
 
 ## Author
 
-**Keyvan Mahmoudi**, PhD student in Natural Language Processing, University of Tehran
+**Keyvan Mahmoudi**, PhD student in computer engineering, University of Tehran
 [LinkedIn](https://www.linkedin.com/in/keyvan-mahmoudi-7b3280103) · [Hugging Face](https://huggingface.co/KeyvanMahmoudi)
 
 ## License
