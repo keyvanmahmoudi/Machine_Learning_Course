@@ -1,49 +1,79 @@
 # Machine Learning Course
 
-Practical notebooks covering the core machine learning toolkit with scikit-learn, Keras, XGBoost and mlxtend: data preprocessing, regression, classification, clustering, dimensionality reduction, neural networks, model selection and association rule learning. The main notebook of each chapter runs on a small dataset from the [`dataset/`](dataset) folder; the numbered sub-notebooks (3.1, 4.1, 4.2) and chapter 8 are larger case studies on real-world data.
+<div dir="rtl">
 
-## Contents
+دورهٔ **یادگیری ماشین** به زبان فارسی، برای کسانی که پایتون، NumPy و pandas را بلدند و می‌خواهند مدل بسازند. این دوره ترم سوم از یک مسیر شش ترمی است و در ۱۴ جلسه، از جریان کار یادگیری ماشین و پیش‌پردازش تا رگرسیون، طبقه‌بندی، روش‌های گروهی، انتخاب مدل، خوشه‌بندی، کاهش ابعاد، تشخیص ناهنجاری و یک پروژهٔ پایانی کامل را با scikit-learn پوشش می‌دهد.
 
-| # | Notebook | Topics | Datasets |
-|---|---|---|---|
-| 1 | [Data Preprocessing](1.%20Data_Preprocessing.ipynb) | Handling missing values, train/test split, feature scaling | `Data.csv` |
-| 2 | [Regression](2.%20Regression.ipynb) | Simple and multiple linear regression, backward elimination, polynomial regression, SVR, decision tree and random forest regression | `Salary_Data.csv`, `50_Startups.csv`, `Position_Salaries.csv` |
-| 3 | [Classification](3.%20Classification.ipynb) | Logistic regression, k-NN, SVM, kernel SVM, Naive Bayes, decision tree and random forest classification | `Social_Network_Ads.csv`, `PastHires.csv` |
-| 3.1 | [Classification case study: bank marketing](3.1%20Classification_Banking_Case_Study.ipynb) | Encoding, scaling, feature selection; outlier detection with Local Outlier Factor, One-Class SVM, Isolation Forest and Minimum Covariance Determinant; SVM, MLP, classification based on association rules (CBA), automated feature engineering (autofeat) with logistic regression | `banking.csv` * |
-| 4 | [Clustering](4.%20Clustering.ipynb) | K-means (elbow method) and hierarchical clustering (dendrograms) | `Mall_Customers.csv` |
-| 4.1 | [K-Means and DBSCAN](4.1%20KMeans_and_DBSCAN.ipynb) | Choosing the number of clusters with the silhouette score, K-means and density-based clustering (DBSCAN), PCA for visualization | `car_insurance.csv`, `earthquake_ir.csv` * |
-| 4.2 | [Gaussian Mixture Models](4.2%20Gaussian_Mixture_EM.ipynb) | Implementing the expectation–maximization (EM) algorithm for Gaussian mixtures from scratch with NumPy; choosing the number of components with the silhouette score | `social_media_data.csv` * |
-| 5 | [Dimensionality Reduction](5.%20Dimensionality_Reduction.ipynb) | PCA, LDA and kernel PCA | `Wine.csv`, `Social_Network_Ads.csv` |
-| 6 | [Artificial Neural Networks](6.%20Artificial_Neural_Networks_(ANN).ipynb) | A feed-forward network for customer churn prediction with Keras | `Churn_Modelling.csv` |
-| 7 | [Model Selection & Boosting](7.%20Model_Selection_&_Boosting.ipynb) | k-fold cross-validation, grid search, XGBoost | `Social_Network_Ads.csv`, `Churn_Modelling.csv` |
-| 8 | [Association Rule Learning](8.%20Association_Rule_Learning.ipynb) | Frequent itemsets with Apriori and association rules (support, confidence, lift) on movie ratings | `movies.csv`, `ratings.csv` * |
+برای هر جلسه سه فایل وجود دارد:
 
-\* Datasets marked with an asterisk are not included in this repository; place the file next to the notebook before running it. The `ratings.csv` and `movies.csv` files follow the format of the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
+- **نوت‌بوک درس** (پوشهٔ `sessions`): توضیحات کامل، مثال‌های اجراشده و تمرین‌های پایان جلسه
+- **پاسخ تمرین‌ها** (پوشهٔ `solutions`): پاسخ پیشنهادی هر تمرین
+- **اسلاید** (پوشهٔ `slides`): ارائهٔ پاورپوینت جلسه برای کلاس
 
-The `dataset/` folder also contains `Market_Basket_Optimisation.csv` (association rules) and `Restaurant_Reviews.tsv` (text classification) for exercises.
+## جلسه‌ها
 
-## Getting started
+| جلسه | موضوع | درس | پاسخ‌ها | اسلاید |
+|---|---|---|---|---|
+| ۱ | مقدمه‌ای بر یادگیری ماشین و جریان کار آن | [نوت‌بوک](sessions/Session01_ml_workflow.ipynb) | [پاسخ تمرین‌ها](solutions/Session01_ml_workflow_solutions.ipynb) | [اسلاید](slides/Session01_ml_workflow.pptx) |
+| ۲ | پیش‌پردازش داده و Pipeline | [نوت‌بوک](sessions/Session02_preprocessing_and_pipelines.ipynb) | [پاسخ تمرین‌ها](solutions/Session02_preprocessing_and_pipelines_solutions.ipynb) | [اسلاید](slides/Session02_preprocessing_and_pipelines.pptx) |
+| ۳ | رگرسیون خطی | [نوت‌بوک](sessions/Session03_linear_regression.ipynb) | [پاسخ تمرین‌ها](solutions/Session03_linear_regression_solutions.ipynb) | [اسلاید](slides/Session03_linear_regression.pptx) |
+| ۴ | رگرسیون چندجمله‌ای، بیش‌برازش و منظم‌سازی | [نوت‌بوک](sessions/Session04_overfitting_and_regularization.ipynb) | [پاسخ تمرین‌ها](solutions/Session04_overfitting_and_regularization_solutions.ipynb) | [اسلاید](slides/Session04_overfitting_and_regularization.pptx) |
+| ۵ | رگرسیون لجستیک و معیارهای ارزیابی طبقه‌بندی | [نوت‌بوک](sessions/Session05_logistic_regression_and_metrics.ipynb) | [پاسخ تمرین‌ها](solutions/Session05_logistic_regression_and_metrics_solutions.ipynb) | [اسلاید](slides/Session05_logistic_regression_and_metrics.pptx) |
+| ۶ | k نزدیک‌ترین همسایه و Naive Bayes | [نوت‌بوک](sessions/Session06_knn_and_naive_bayes.ipynb) | [پاسخ تمرین‌ها](solutions/Session06_knn_and_naive_bayes_solutions.ipynb) | [اسلاید](slides/Session06_knn_and_naive_bayes.pptx) |
+| ۷ | ماشین بردار پشتیبان (SVM) | [نوت‌بوک](sessions/Session07_support_vector_machines.ipynb) | [پاسخ تمرین‌ها](solutions/Session07_support_vector_machines_solutions.ipynb) | [اسلاید](slides/Session07_support_vector_machines.pptx) |
+| ۸ | درخت تصمیم | [نوت‌بوک](sessions/Session08_decision_trees.ipynb) | [پاسخ تمرین‌ها](solutions/Session08_decision_trees_solutions.ipynb) | [اسلاید](slides/Session08_decision_trees.pptx) |
+| ۹ | روش‌های گروهی (Ensemble Learning) | [نوت‌بوک](sessions/Session09_ensemble_methods.ipynb) | [پاسخ تمرین‌ها](solutions/Session09_ensemble_methods_solutions.ipynb) | [اسلاید](slides/Session09_ensemble_methods.pptx) |
+| ۱۰ | انتخاب مدل، تنظیم ابرپارامتر و دادهٔ نامتوازن | [نوت‌بوک](sessions/Session10_model_selection.ipynb) | [پاسخ تمرین‌ها](solutions/Session10_model_selection_solutions.ipynb) | [اسلاید](slides/Session10_model_selection.pptx) |
+| ۱۱ | خوشه‌بندی (Clustering) | [نوت‌بوک](sessions/Session11_clustering.ipynb) | [پاسخ تمرین‌ها](solutions/Session11_clustering_solutions.ipynb) | [اسلاید](slides/Session11_clustering.pptx) |
+| ۱۲ | کاهش ابعاد (Dimensionality Reduction) | [نوت‌بوک](sessions/Session12_dimensionality_reduction.ipynb) | [پاسخ تمرین‌ها](solutions/Session12_dimensionality_reduction_solutions.ipynb) | [اسلاید](slides/Session12_dimensionality_reduction.pptx) |
+| ۱۳ | قوانین انجمنی و تشخیص ناهنجاری | [نوت‌بوک](sessions/Session13_association_rules_and_anomaly_detection.ipynb) | [پاسخ تمرین‌ها](solutions/Session13_association_rules_and_anomaly_detection_solutions.ipynb) | [اسلاید](slides/Session13_association_rules_and_anomaly_detection.pptx) |
+| ۱۴ | پروژهٔ پایانی، پیش‌بینی پاسخ مشتری به تماس بازاریابی بانک | [نوت‌بوک](sessions/Session14_final_project.ipynb) | [پاسخ تمرین‌ها](solutions/Session14_final_project_solutions.ipynb) | [اسلاید](slides/Session14_final_project.pptx) |
 
-Open a notebook in Google Colab and upload the dataset it uses, or run locally:
+## مسیر یادگیری
+
+| ترم | دوره |
+|---|---|
+| ۱ | [برنامه‌نویسی پایتون](https://github.com/keyvanmahmoudi/Python_Course) |
+| ۲ | [علم داده](https://github.com/keyvanmahmoudi/Data_Science_Course) |
+| ۳ | **یادگیری ماشین** (همین دوره) |
+| ۴ | [یادگیری عمیق و شبکه‌های عصبی](https://github.com/keyvanmahmoudi/Deep_Learning_Course) |
+| ۵ | [مهندسی مدل‌های زبانی بزرگ (LLM) و برنامه‌نویسی با کمک هوش مصنوعی (Vibe Coding)](https://github.com/keyvanmahmoudi/LLM_Engineering_Course) |
+| ۶ | [ساخت محصول هوش مصنوعی با FastAPI و کسب درآمد](https://github.com/keyvanmahmoudi/AI_Product_Course) |
+
+شبکه‌های عصبی و PyTorch در ترم چهارم (یادگیری عمیق) آموزش داده می‌شوند.
+
+## اجرا
+
+ساده‌ترین راه، باز کردن نوت‌بوک‌ها در Google Colab با دکمهٔ **Open in Colab** بالای هر نوت‌بوک است. داده‌ها مستقیم از همین مخزن خوانده می‌شوند و نیازی به آپلود فایل نیست. برای اجرا روی سیستم خودتان:
+
+</div>
 
 ```bash
 git clone https://github.com/keyvanmahmoudi/Machine_Learning_Course.git
 cd Machine_Learning_Course
-pip install jupyter numpy pandas matplotlib seaborn scikit-learn statsmodels scipy keras tensorflow xgboost pydotplus mlxtend pyarc autofeat
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 jupyter notebook
 ```
 
-Notebooks read their CSV files by file name, so either run them from the folder that contains the data or adjust the path in the loading cell (for example `dataset/Data.csv`).
+<div dir="rtl">
 
-## Prerequisites
+## داده‌ها
 
-Basic Python, NumPy and pandas. The companion course [Python and Data Analysis](https://github.com/keyvanmahmoudi/Python-and-data-analysis) covers these from scratch.
+همهٔ داده‌ها در پوشهٔ [`data`](data) هستند و توضیح و منبع هر فایل در [`data/README.md`](data/README.md) آمده است. بعضی جلسه‌ها هم از داده‌های داخلی scikit-learn (مثل Wine، Digits و Breast Cancer) استفاده می‌کنند.
 
-## Author
+## فونت‌ها
 
-**Keyvan Mahmoudi**, PhD student in computer engineering, University of Tehran
+اسلایدها با فونت **Times New Roman** برای متن انگلیسی، **وزیرمتن (Vazirmatn FD)** برای متن فارسی و **لاله‌زار (Lalezar)** برای تیترها طراحی شده‌اند. قبل از باز کردن اسلایدها، فونت‌های پوشهٔ [`fonts`](fonts) را روی سیستم نصب کنید (هر دو فونت با مجوز آزاد SIL OFL منتشر شده‌اند).
+
+## مدرس
+
+**کیوان محمودی**، دانشجوی دکتری مهندسی کامپیوتر گرایش نرم افزار، دانشگاه تهران
 [LinkedIn](https://www.linkedin.com/in/keyvan-mahmoudi-7b3280103) · [Hugging Face](https://huggingface.co/KeyvanMahmoudi)
 
-## License
+## مجوز
 
-The code in this repository is released under the [MIT License](LICENSE). The files in `dataset/` are widely used public teaching datasets that remain under the terms of their original sources and are not covered by this license.
+این مخزن تحت [مجوز MIT](LICENSE) منتشر شده است. مجموعه‌داده‌های شخص ثالث مجوز خودشان را دارند (فهرست در [`data/README.md`](data/README.md)).
+
+</div>
